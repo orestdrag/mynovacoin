@@ -1,0 +1,9 @@
+Building BCCA
+
+See doc/readme-qt.rst for instructions on building BCCA QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of BCCA.
+
+See doc/build-*.txt for instructions on building bccad,
+the intended-for-services, no-graphical-interface, reference
+implementation of BCCA.
