@@ -1077,7 +1077,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XXCS %3 (%4)</source>
+        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XBCCACOIN %3 (%4)</source>
         <translation type="unfinished"/>
     </message>
     <message>

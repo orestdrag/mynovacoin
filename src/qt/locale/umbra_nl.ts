@@ -1079,8 +1079,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XXCS %3 (%4)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; BCCA, kring grootte %2 aan XXCS %3 (%4)</translation>
+        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XBCCACOIN %3 (%4)</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; BCCA, kring grootte %2 aan XBCCACOIN %3 (%4)</translation>
     </message>
     <message>
         <location line="+4"/>

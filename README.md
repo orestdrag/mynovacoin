@@ -1,7 +1,7 @@
 ![logo](http://i.imgur.com/9ufqkgK.png)
 Specifications:
 ==========================
-* Total number of coins: 250,000,000 XCS
+* Total number of coins: 250,000,000 BCCACOIN
 * Stake interest: 8% annual static inflation
 * Confirmations: 6 blocks
 * Coinbase Maturity: 80 blocks

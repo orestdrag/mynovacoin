@@ -24,10 +24,10 @@ QT_END_NAMESPACE
 
 enum eTxnTypeInd
 {
-    TXT_XCS_TO_XCS = 0,
-    TXT_XCS_TO_ANON,
+    TXT_BCCACOIN_TO_BCCACOIN = 0,
+    TXT_BCCACOIN_TO_ANON,
     TXT_ANON_TO_ANON,
-    TXT_ANON_TO_XCS,
+    TXT_ANON_TO_BCCACOIN,
 };
 
 class SendCoinsRecipient

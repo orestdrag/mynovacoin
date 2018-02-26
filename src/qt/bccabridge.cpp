@@ -464,25 +464,25 @@ bool BCCABridge::sendCoins(bool fUseCoinControl, QString sChangeAddr)
     QStringList formatted;
     foreach(const SendCoinsRecipient &rcp, recipients)
     {
-        int inputType; // 0 XCS, 1 BCCA
+        int inputType; // 0 BCCACOIN, 1 BCCA
         switch(rcp.txnTypeInd)
         {
-            case TXT_XCS_TO_XCS:
-                formatted.append(tr("<b>%1</b> to %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, rcp.amount), Qt::escape(rcp.label), rcp.address));
+            case TXT_BCCACOIN_TO_BCCACOIN:
+                formatted.append(tr("<b>%1</b> to %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, rcp.amount), Qt::escape(rcp.label), rcp.address));
                 inputType = 0;
                 break;
-            case TXT_XCS_TO_ANON:
-                formatted.append(tr("<b>%1</b> to BCCA %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, rcp.amount), Qt::escape(rcp.label), rcp.address));
+            case TXT_BCCACOIN_TO_ANON:
+                formatted.append(tr("<b>%1</b> to BCCA %2 (%3)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, rcp.amount), Qt::escape(rcp.label), rcp.address));
                 inputType = 0;
                 nAnonOutputs++;
                 break;
             case TXT_ANON_TO_ANON:
-                formatted.append(tr("<b>%1</b> BCCA, ring size %2 to BCCA %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
+                formatted.append(tr("<b>%1</b> BCCA, ring size %2 to BCCA %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
                 inputType = 1;
                 nAnonOutputs++;
                 break;
-            case TXT_ANON_TO_XCS:
-                formatted.append(tr("<b>%1</b> BCCA, ring size %2 to XCS %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
+            case TXT_ANON_TO_BCCACOIN:
+                formatted.append(tr("<b>%1</b> BCCA, ring size %2 to BCCACOIN %3 (%4)").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, rcp.amount), QString::number(rcp.nRingSize), Qt::escape(rcp.label), rcp.address));
                 inputType = 1;
                 break;
             default:
@@ -590,7 +590,7 @@ bool BCCABridge::sendCoins(bool fUseCoinControl, QString sChangeAddr)
         case WalletModel::AmountWithFeeExceedsBalance:
             QMessageBox::warning(window, tr("Send Coins"),
                 tr("The total exceeds your balance when the %1 transaction fee is included.").
-                arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, sendstatus.fee)),
+                arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, sendstatus.fee)),
                 QMessageBox::Ok, QMessageBox::Ok);
             return false;
         case WalletModel::DuplicateAddress:
@@ -635,7 +635,7 @@ bool BCCABridge::sendCoins(bool fUseCoinControl, QString sChangeAddr)
             return false;
         case WalletModel::SCR_AmountWithFeeExceedsBCCABalance:
             QMessageBox::warning(window, tr("Send Coins"),
-                tr("The total exceeds your BCCA balance when the %1 transaction fee is included.").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::XCS, sendstatus.fee)),
+                tr("The total exceeds your BCCA balance when the %1 transaction fee is included.").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::BCCACOIN, sendstatus.fee)),
                 QMessageBox::Ok, QMessageBox::Ok);
             return false;
         case WalletModel::SCR_Error:

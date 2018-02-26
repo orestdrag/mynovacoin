@@ -11,10 +11,10 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(XCS);
-    unitlist.append(mXCS);
-    unitlist.append(uXCS);
-    unitlist.append(sXCS);
+    unitlist.append(BCCACOIN);
+    unitlist.append(mBCCACOIN);
+    unitlist.append(uBCCACOIN);
+    unitlist.append(sBCCACOIN);
     return unitlist;
 }
 
@@ -22,10 +22,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case XCS:
-    case mXCS:
-    case uXCS:
-    case sXCS:
+    case BCCACOIN:
+    case mBCCACOIN:
+    case uBCCACOIN:
+    case sBCCACOIN:
         return true;
     default:
         return false;
@@ -36,10 +36,10 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case XCS: return QString("XCS");
-    case mXCS: return QString("mXCS");
-    case uXCS: return QString::fromUtf8("μXCS");
-    case sXCS: return QString::fromUtf8("cybtoshi");
+    case BCCACOIN: return QString("BCCACOIN");
+    case mBCCACOIN: return QString("mBCCACOIN");
+    case uBCCACOIN: return QString::fromUtf8("μBCCACOIN");
+    case sBCCACOIN: return QString::fromUtf8("cybtoshi");
     default: return QString("???");
     }
 }
@@ -48,10 +48,10 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case XCS:  return QString("BCCAs");
-    case mXCS: return QString("Milli-BCCAs (1 / 1,000)");
-    case uXCS: return QString("Micro-BCCAs (1 / 1,000,000)");
-    case sXCS: return QString("cybtoshi (1 / 100,000,000)");
+    case BCCACOIN:  return QString("BCCAs");
+    case mBCCACOIN: return QString("Milli-BCCAs (1 / 1,000)");
+    case uBCCACOIN: return QString("Micro-BCCAs (1 / 1,000,000)");
+    case sBCCACOIN: return QString("cybtoshi (1 / 100,000,000)");
     default:   return QString("???");
     }
 }
@@ -60,9 +60,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case mXCS: return 100000;
-    case uXCS: return 100;
-    case sXCS: return 1;
+    case mBCCACOIN: return 100000;
+    case uBCCACOIN: return 100;
+    case sBCCACOIN: return 1;
     default:   return 100000000;
     }
 }
@@ -71,10 +71,10 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case XCS: return 8; // 21,000,000 (# digits, without commas)
-    case mXCS: return 11; // 21,000,000,000
-    case uXCS: return 14; // 21,000,000,000,000
-    case sXCS: return 16; // 2,100,000,000,000,000
+    case BCCACOIN: return 8; // 21,000,000 (# digits, without commas)
+    case mBCCACOIN: return 11; // 21,000,000,000
+    case uBCCACOIN: return 14; // 21,000,000,000,000
+    case sBCCACOIN: return 16; // 2,100,000,000,000,000
     default: return 0;
     }
 }
@@ -83,9 +83,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case XCS: return 8;
-    case mXCS: return 5;
-    case uXCS: return 2;
+    case BCCACOIN: return 8;
+    case mBCCACOIN: return 5;
+    case uBCCACOIN: return 2;
     default: return 0;
     }
 }

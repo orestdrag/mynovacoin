@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef XCS_CORE_H
-#define XCS_CORE_H
+#ifndef BCCACOIN_CORE_H
+#define BCCACOIN_CORE_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -429,5 +429,5 @@ public:
     int64_t nTime;
 };
 
-#endif  // XCS_CORE_H
+#endif  // BCCACOIN_CORE_H
 

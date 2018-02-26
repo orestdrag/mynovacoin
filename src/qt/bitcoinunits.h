@@ -17,10 +17,10 @@ public:
      */
     enum Unit
     {
-        XCS,
-        mXCS,
-        uXCS,
-        sXCS
+        BCCACOIN,
+        mBCCACOIN,
+        uBCCACOIN,
+        sBCCACOIN
     };
 
     //! @name Static API

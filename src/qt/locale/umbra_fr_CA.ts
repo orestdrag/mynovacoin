@@ -1079,7 +1079,7 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XXCS %3 (%4)</source>
+        <source>&lt;b&gt;%1&lt;/b&gt; BCCA, ring size %2 to XBCCACOIN %3 (%4)</source>
         <translation type="unfinished"/>
     </message>
     <message>

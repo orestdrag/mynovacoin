@@ -68,9 +68,9 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
     QList<TransactionRecord> parts;
     int64_t nTime = wtx.GetTxTime();
 
-    int64_t nCredXCS, nCredBCCA;
-    wtx.GetCredit(nCredXCS, nCredBCCA, true);
-    int64_t nCredit = nCredXCS + nCredBCCA;
+    int64_t nCredBCCACOIN, nCredBCCA;
+    wtx.GetCredit(nCredBCCACOIN, nCredBCCA, true);
+    int64_t nCredit = nCredBCCACOIN + nCredBCCA;
     int64_t nDebit = wtx.GetDebit();
     int64_t nNet = nCredit - nDebit;
     uint256 hash = wtx.GetHash(), hashPrev = 0;

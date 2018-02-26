@@ -465,12 +465,12 @@ WalletModel::SendCoinsReturn WalletModel::sendCoinsAnon(const QList<SendCoinsRec
         int inputType = 0;
         switch(rcp.txnTypeInd)
         {
-            case TXT_XCS_TO_XCS:
-            case TXT_XCS_TO_ANON:
+            case TXT_BCCACOIN_TO_BCCACOIN:
+            case TXT_BCCACOIN_TO_ANON:
                 inputType = 0;
                 break;
             case TXT_ANON_TO_ANON:
-            case TXT_ANON_TO_XCS:
+            case TXT_ANON_TO_BCCACOIN:
                 inputType = 1;
                 break;
             default:
@@ -532,8 +532,8 @@ WalletModel::SendCoinsReturn WalletModel::sendCoinsAnon(const QList<SendCoinsRec
             int64_t nValue = rcp.amount;
             std::string sNarr = rcp.narration.toStdString();
 
-            if (rcp.txnTypeInd == TXT_XCS_TO_XCS
-                || rcp.txnTypeInd == TXT_ANON_TO_XCS)
+            if (rcp.txnTypeInd == TXT_BCCACOIN_TO_BCCACOIN
+                || rcp.txnTypeInd == TXT_ANON_TO_BCCACOIN)
             {
                 // -- out spec
                 std::string sError;
