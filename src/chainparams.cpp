@@ -105,7 +105,7 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 class CBaseChainParams : public CChainParams {
 public:
     CBaseChainParams() {
-        const char* pszTimestamp = "CybSec - May 2017";
+        const char* pszTimestamp = "BCCA 2018 - March";
         CTransaction txNew;
         txNew.nTime = GENESIS_BLOCK_TIME;
         txNew.vin.resize(1);
@@ -138,9 +138,9 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xfb;
-        pchMessageStart[1] = 0xf2;
-        pchMessageStart[2] = 0xeb;
+        pchMessageStart[0] = 0xdc;
+        pchMessageStart[1] = 0xd1;
+        pchMessageStart[2] = 0xea;
         pchMessageStart[3] = 0xb4;
 
         vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
@@ -196,10 +196,10 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0x2c;
-        pchMessageStart[2] = 0x44;
-        pchMessageStart[3] = 0xb4;
+        pchMessageStart[0] = 0xdb;
+        pchMessageStart[1] = 0xd0;
+        pchMessageStart[2] = 0xe9;
+        pchMessageStart[3] = 0xb3;
 
         vAlertPubKey = ParseHex("042245fcbce048cb5a93c26dc1cdb613f2d866c66ede4bb806eb6ea373d8378775984d36905c9c8b1ba891901324351ac0d8c49bb46f937fa3c57eaae4da1e54aa");
                 
