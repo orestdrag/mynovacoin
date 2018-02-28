@@ -46,7 +46,7 @@ static const unsigned int MAX_MULTI_BLOCK_ELEMENTS = 64;     // processing large
 static const unsigned int MAX_MULTI_BLOCK_THIN_ELEMENTS = 128;
 
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = std::numeric_limits<int64_t>::max();
+static const int64_t MAX_MONEY = std::numeric_limits<int64_t>::max()-1;
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
