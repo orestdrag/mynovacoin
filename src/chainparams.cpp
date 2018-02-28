@@ -143,7 +143,7 @@ public:
         pchMessageStart[2] = 0xea;
         pchMessageStart[3] = 0xb4;
 
-        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
+        vAlertPubKey = ParseHex("04768afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         
         nDefaultPort = 7879;
         nRPCPort = 7878;
@@ -161,8 +161,8 @@ public:
 	genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 811275;
         hashGenesisBlock = genesis.GetHash();
-	assert(hashGenesisBlock == uint256("0x00000012d9d35172668dbd051dc8f5e8adc8963d59a1249bb5bc7af9fb764e23"));
-        assert(genesis.hashMerkleRoot == uint256("0x403df701c3094894978172316174037147813585fcd655011f3822364c06ebd6"));
+    assert(hashGenesisBlock == uint256("0x"));
+        assert(genesis.hashMerkleRoot == uint256("0x"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(27).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(136).convert_to_container<std::vector<unsigned char> >();
@@ -201,7 +201,7 @@ public:
         pchMessageStart[2] = 0xe9;
         pchMessageStart[3] = 0xb3;
 
-        vAlertPubKey = ParseHex("042245fcbce048cb5a93c26dc1cdb613f2d866c66ede4bb806eb6ea373d8378775984d36905c9c8b1ba891901324351ac0d8c49bb46f937fa3c57eaae4da1e54aa");
+        vAlertPubKey = ParseHex("043345fcbce048cb5a93c26dc1cdb613f2d866c66ede4bb806eb6ea373d8378775984d36905c9c8b1ba891901324351ac0d8c49bb46f937fa3c57eaae4da1e54aa");
                 
         nDefaultPort = 16601;
         nRPCPort = 16600;
@@ -221,7 +221,7 @@ public:
 	if (true && genesis.GetHash() != hashGenesisBlock)
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000ab6c10837b64ffa626f941e2692017718e8ff7b30282f15ab0e2e25abdeb"));
+        assert(hashGenesisBlock == uint256("0x"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(127).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(196).convert_to_container<std::vector<unsigned char> >();
