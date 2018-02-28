@@ -7,8 +7,8 @@ Specifications:
 * Coinbase Maturity: 80 blocks
 * Min stake age: 2 hours
 * 10 minute PoSv3 difficulty retarget
-* RPC Port = 6600
-* P2P Port = 6601
+* RPC Port = 7878
+* P2P Port = 7879
 
 
 Inside:
