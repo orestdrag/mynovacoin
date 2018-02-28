@@ -1832,7 +1832,7 @@ Kring grootte van één is niet geheim en tast het netwerk aan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The address to send the payment to  (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>The address to send the payment to  (e.g. BXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"/>
     </message>
     <message>

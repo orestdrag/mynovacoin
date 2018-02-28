@@ -118,7 +118,7 @@ static const char *html_strings[] = {
     QT_TRANSLATE_NOOP("BCCABridge", "Destination address of transaction."),
     QT_TRANSLATE_NOOP("BCCABridge", "Short payment note."),
     QT_TRANSLATE_NOOP("BCCABridge", "Amount removed from or added to balance."),
-    QT_TRANSLATE_NOOP("BCCABridge", "The address to send the payment to  (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"),
+    QT_TRANSLATE_NOOP("BCCABridge", "The address to send the payment to  (e.g. BXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)"),
     QT_TRANSLATE_NOOP("BCCABridge", "Choose address from address book"),
     QT_TRANSLATE_NOOP("BCCABridge", "Enter a public key for the address above"),
     QT_TRANSLATE_NOOP("BCCABridge", "Enter a label for this group"),

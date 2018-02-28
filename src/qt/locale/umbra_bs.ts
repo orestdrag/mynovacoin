@@ -1817,7 +1817,7 @@ Ring size of one is not anonymous, and harms the network.</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>The address to send the payment to  (e.g. SXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
+        <source>The address to send the payment to  (e.g. BXywGBZBowrppUwwNUo1GCRDTibzJi7g2M)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
