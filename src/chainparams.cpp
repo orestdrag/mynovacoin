@@ -164,7 +164,7 @@ public:
 	assert(hashGenesisBlock == uint256("0x00000012d9d35172668dbd051dc8f5e8adc8963d59a1249bb5bc7af9fb764e23"));
         assert(genesis.hashMerkleRoot == uint256("0x403df701c3094894978172316174037147813585fcd655011f3822364c06ebd6"));
 
-        base58Prefixes[PUBKEY_ADDRESS]      = list_of(28).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS]      = list_of(27).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(136).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SECRET_KEY]          = list_of(179).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[STEALTH_ADDRESS]     = list_of(40).convert_to_container<std::vector<unsigned char> >();
