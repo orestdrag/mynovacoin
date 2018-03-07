@@ -22,13 +22,27 @@ struct SeedSpec6 {
 int64_t CChainParams::GetProofOfWorkReward(int nHeight, int64_t nFees) const
 {
     // miner's coin base reward
-    int64_t nSubsidy = 0;
+//    int64_t nSubsidy = 0;
+    int64_t nSubsidy = 500 * COIN;
     	
-	if(nHeight == 1)
-		nSubsidy = (NetworkID() == CChainParams::TESTNET ? 100000 : 250000000) * COIN;  // 250Mill Pre-mine on MainNet
+//	if(nHeight == 1)
+//		nSubsidy = (NetworkID() == CChainParams::TESTNET ? 100000 : 250000000) * COIN;  // 250Mill Pre-mine on MainNet
     
-    else if(nHeight <= nLastPOWBlock)
-        nSubsidy = 0;
+//    else if(nHeight <= nLastPOWBlock)
+//        nSubsidy = 0;
+
+    if(nHeight == 2)
+    {
+        nSubsidy = 2000000 * COIN;
+    }
+    else if(nHeight < 5000)
+    {
+        nSubsidy = 5000 * COIN;
+    }
+    else if(nHeight < 10000)
+    {
+        nSubsidy = 2500 * COIN;
+    };
 
     if (fDebug && GetBoolArg("-printcreation"))
         LogPrintf("GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy).c_str(), nSubsidy);

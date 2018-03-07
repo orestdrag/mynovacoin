@@ -1889,8 +1889,8 @@ void static PruneOrphanBlocks()
     }
 }
 
-static const int64_t nTargetTimespan = 24 * 60 * 60;  // 24 hours
-
+//static const int64_t nTargetTimespan = 24 * 60 * 60;
+static const int64_t nTargetTimespan = 5 * 60;  // clonecoin 5 minutes
 
 // ppcoin: find last block index up to pindex
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake)
@@ -1922,7 +1922,9 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
     if (pindexPrevPrev->pprev == NULL)
         return bnTargetLimit.GetCompact(); // second block
 
-    int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
+//    int64_t nTargetSpacing = GetTargetSpacing(pindexLast->nHeight);
+    int64_t nTargetSpacing = 1 * 30; // clonecoin 30 seconds
+
     int64_t nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
     if (nActualSpacing < 0)
         nActualSpacing = nTargetSpacing;
