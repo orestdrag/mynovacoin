@@ -119,7 +119,7 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 class CBaseChainParams : public CChainParams {
 public:
     CBaseChainParams() {
-        const char* pszTimestamp = "BCCA 2018 - March";
+        const char* pszTimestamp = "The Times 12/March/2018 Saudis Said to Use Coercion and Abuse to Seize Billions";
         CTransaction txNew;
         txNew.nTime = GENESIS_BLOCK_TIME;
         txNew.vin.resize(1);
@@ -172,11 +172,11 @@ public:
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
         bnProofOfStakeLimitV2 = CBigNum(~uint256(0) >> 48);
-	genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 811275;
+        genesis.nBits    = bnProofOfWorkLimit.GetCompact();
+        genesis.nNonce   = 437918;
         hashGenesisBlock = genesis.GetHash();
-    assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00000fd1f269399a5973233b617a4a22e4ad9fed1ba1f52163e0845a2b6a7c84"));
+        assert(genesis.hashMerkleRoot == uint256("0x28ddb6b63e5d4d18b989d490b7bcce836d6b183ad5ae4cb08bdc9eee31586998"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(27).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(136).convert_to_container<std::vector<unsigned char> >();
@@ -235,7 +235,7 @@ public:
 	if (true && genesis.GetHash() != hashGenesisBlock)
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x"));
+        //assert(hashGenesisBlock == uint256("0x"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(127).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(196).convert_to_container<std::vector<unsigned char> >();
